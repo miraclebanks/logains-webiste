@@ -162,7 +162,6 @@ $color-accent: #3190e7;
 $background-image: url('https://images.unsplash.com/photo-1566738780863-f9608f88f3a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2378&q=80');
 
 body {
-  color: $color-primary;
   font-family: $font-primary;
   background: $background-image no-repeat center / cover fixed;
   min-height: 100vh;
@@ -177,6 +176,7 @@ body {
 
 // Card Component
 .card {
+  color: #2b2c48 !important;
   max-width: 340px;
   margin: auto;
   position: relative;
