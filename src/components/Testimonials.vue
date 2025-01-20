@@ -1,5 +1,5 @@
 <script>
-import { ref, onMounted } from 'vue'
+import { ref, watch, onMounted } from 'vue'
 
 export default {
   name: 'Testimonials',
@@ -9,13 +9,13 @@ export default {
         id: 1,
         name: 'EMILIANO AQUILANI',
         image: 'http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg',
-        text: 'Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate.',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.',
       },
       {
         id: 2,
         name: 'ANNA ITURBE',
         image: 'http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg',
-        text: 'Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate.',
+        text: 'Hashtag bespoke YOLO, put a bird on it hammock polaroid wayfarers tattooed neutra squid lumbersexual meh humblebrag VHS. Cred tumblr cold-pressed messenger bag small batch trust fund, mustache next level. Keytar swag kogi viral waistcoat flexitarian.',
       },
       {
         id: 3,
@@ -24,6 +24,16 @@ export default {
         text: 'Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate.',
       },
     ])
+
+    const isDarkMode = ref(false)
+
+    watch(isDarkMode, (value) => {
+      if (value) {
+        document.body.classList.add('dark-mode')
+      } else {
+        document.body.classList.remove('dark-mode')
+      }
+    })
 
     const activeTestimonial = ref(1) // Start with the first testimonial
 
@@ -42,7 +52,7 @@ export default {
       setInterval(next, 5000) // Change testimonial every 5 seconds
     })
 
-    return { testimonials, activeTestimonial, next, prev }
+    return { testimonials, activeTestimonial, next, prev, isDarkMode }
   },
 }
 </script>
@@ -79,8 +89,24 @@ export default {
 
 <style scoped>
 /* General Styles */
+body {
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
 .testimonials {
   text-align: center;
+  padding: 2rem;
+}
+
+body.dark-mode .testimonials {
+  background-color: #1a1a1a;
 }
 
 .carousel {
@@ -115,6 +141,15 @@ export default {
     0 15px 12px rgba(0, 0, 0, 0.02);
 }
 
+body.dark-mode .shadow-effect {
+  background: #1e1e1e;
+  color: #f1f1f1;
+  border: 1px solid #444;
+  box-shadow:
+    0 19px 38px rgba(0, 0, 0, 0.5),
+    0 15px 12px rgba(0, 0, 0, 0.2);
+}
+
 .shadow-effect img {
   max-width: 90px;
   margin: 0 auto 17px;
@@ -125,6 +160,10 @@ export default {
   margin-top: 10px;
   font-weight: bold;
   color: #3190e7;
+}
+
+body.dark-mode .testimonial-name {
+  color: #90caf9;
 }
 
 .carousel-controls {
@@ -141,7 +180,15 @@ export default {
   cursor: pointer;
 }
 
+body.dark-mode .carousel-controls button {
+  background-color: #90caf9;
+}
+
 .carousel-controls button:hover {
   background-color: #217ac0;
+}
+
+body.dark-mode .carousel-controls button:hover {
+  background-color: #64b5f6;
 }
 </style>

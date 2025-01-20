@@ -4,10 +4,12 @@ import { ref, watch } from 'vue'
 
 export default {
   name: 'Home',
+  components: {
+    Testimonials,
+  },
   setup() {
     const isDarkMode = ref(false)
 
-    // Watch for theme changes and apply the "dark-mode" class to the body
     watch(isDarkMode, (value) => {
       if (value) {
         document.body.classList.add('dark-mode')
