@@ -111,11 +111,11 @@ body.dark-mode .navbar {
 }
 
 .nav-links a:hover {
-  color: #5789ff;
+  color: #6c7c92;
 }
 
 body.dark-mode .nav-links a:hover {
-  color: #90caf9;
+  color: #b5b2a9;
 }
 
 /* Dark Mode Toggle */

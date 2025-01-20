@@ -36,7 +36,7 @@ li {
 }
 
 button {
-  background-color: #ff5e57;
+  background-color: #ded1b3;
   color: #fff;
   border: none;
   padding: 5px 10px;
@@ -45,6 +45,6 @@ button {
 }
 
 button:hover {
-  background-color: #ff3a2e;
+  background-color: #3b506d;
 }
 </style>

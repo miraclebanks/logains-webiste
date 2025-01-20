@@ -159,11 +159,11 @@ body.dark-mode .shadow-effect {
 .testimonial-name {
   margin-top: 10px;
   font-weight: bold;
-  color: #3190e7;
+  color: #bacbd8;
 }
 
 body.dark-mode .testimonial-name {
-  color: #90caf9;
+  color: #bacbd8;
 }
 
 .carousel-controls {
@@ -174,21 +174,21 @@ body.dark-mode .testimonial-name {
   padding: 10px 20px;
   margin: 0 10px;
   border: none;
-  background-color: #3190e7;
+  background-color: #6c7c92;
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
 }
 
 body.dark-mode .carousel-controls button {
-  background-color: #90caf9;
+  background-color: #6c7c92;
 }
 
 .carousel-controls button:hover {
-  background-color: #217ac0;
+  background-color: #b5b2a9;
 }
 
 body.dark-mode .carousel-controls button:hover {
-  background-color: #64b5f6;
+  background-color: #b5b2a9;
 }
 </style>
