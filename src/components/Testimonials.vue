@@ -9,7 +9,7 @@ export default {
         id: 1,
         name: 'EMILIANO AQUILANI',
         image: 'http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.',
+        text: 'Testimonials auto cycle or you cant use buttons to navigate.',
       },
       {
         id: 2,
@@ -21,7 +21,7 @@ export default {
         id: 3,
         name: 'LARA ATKINSON',
         image: 'http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg',
-        text: 'Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate.',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.',
       },
     ])
 
@@ -72,9 +72,9 @@ export default {
             >
               <div class="shadow-effect">
                 <img class="img-circle" :src="testimonial.image" :alt="testimonial.name" />
+                <div class="testimonial-name">{{ testimonial.name }}</div>
                 <p>{{ testimonial.text }}</p>
               </div>
-              <div class="testimonial-name">{{ testimonial.name }}</div>
             </div>
           </div>
           <div class="carousel-controls">
