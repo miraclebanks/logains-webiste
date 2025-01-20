@@ -21,3 +21,30 @@ export default {
     <button @click="cartStore.clearCart">Clear Cart</button>
   </div>
 </template>
+<style scoped>
+.page {
+  padding: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+}
+
+button {
+  background-color: #ff5e57;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ff3a2e;
+}
+</style>
